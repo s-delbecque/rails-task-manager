@@ -1,0 +1,16 @@
+<button><%= link_to "Edit task", edit_path %></button>
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p><% if @task.completed == true %></p>
+<p><%= check_box_tag(:completed) %></p>
+<p><%= label_tag(:completed, "This taks is done") %></p>
+<p><% else %></p>
+<p><%= check_box_tag(:uncompleted) %>
+<p><%= label_tag(:uncompleted, "This task is not done") %></p>
+<p><% end %></p>
+
+
+<p><%= link_to "Back to tasks", tasks_path %></p>
+
+
+
